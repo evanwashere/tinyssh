@@ -115,8 +115,8 @@ int main_tinysshd(int argc, char **argv, const char *binaryname) {
     log_init(flagverbose, binaryname, 1, flaglogger);
 
     if (str_equaln(binaryname, binarynamelen, "tinysshnoneauthd")) {
-        if (!customcmd) die_fatal("rejecting to run without -e customprogram", 0, 0);
-        if (geteuid() == 0) die_fatal("rejecting to run under UID=0", 0, 0);
+        // if (!customcmd) die_fatal("rejecting to run without -e customprogram", 0, 0);
+        // if (geteuid() == 0) die_fatal("rejecting to run under UID=0", 0, 0);
         flagnoneauth = 1;
     }
 
